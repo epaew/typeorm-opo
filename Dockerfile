@@ -1,9 +1,8 @@
-FROM node:12-slim
+FROM node:12-alpine
 
 WORKDIR /app
 
-ADD package.json .
-ADD yarn.lock .
+COPY package.json yarn.lock ./
 
 RUN yarn install
 
